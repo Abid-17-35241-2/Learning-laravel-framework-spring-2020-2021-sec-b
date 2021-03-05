@@ -7,14 +7,9 @@
     <title>Home Page</title>
 </head>
 <body>
-      {{-- <h1>Welcome Home!!</h1> --}}
+
     <h1>Welcome Home!! {{ session ('name')}}</h1>
-    {{-- <a href="/home/create">Create user</a> |
-    <a href="/home/userlist">View UserList</a> |
     <a href="/logout">Logout</a>
- --}}
-   {{-- <br>
-   {{$id}} --}}
 
 </body>
 </html>
