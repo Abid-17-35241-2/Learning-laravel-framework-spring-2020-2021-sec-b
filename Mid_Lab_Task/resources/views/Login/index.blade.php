@@ -1,39 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Login page</title>
-</head>
+    <head>
+        <title>Triple Forms Responsive Widget Template :: w3layouts</title>
+
+        <!-- Meta tag Keywords -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="Triple Forms Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+        <script>
+            addEventListener("load", function () {
+                setTimeout(hideURLbar, 0);
+            }, false);
+
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+        </script>
+        <!-- Meta tag Keywords -->
+        <!-- css files -->
+        <link rel="stylesheet" href="loginD/css/style.css" type="text/css" media="all" />
+        <!-- Style-CSS -->
+        <link href="loginD/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Font-Awesome-Icons-CSS -->
+        <!-- //css files -->
+
+        <!-- web-fonts -->
+        <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext"
+         rel="stylesheet">
+        <!-- //web-fonts -->
+    </head>
 <body>
-  <h1>Login Page</h1>
-  <div style="text-align: right;"><a href="/registration">SignUp</a></div>
-  <form method="post">
+    <div class="main-bg">
+		<!-- title -->
+		<h1>Login Forms</h1>
+		<!-- //title -->
+		<div class="sub-main-w3">
+			<div class="image-style">
 
-    @csrf
+			</div>
+			<!-- vertical tabs -->
+			<div class="vertical-tab">
+				<div id="section1" class="section-w3ls">
+					<input type="radio" name="sections" id="option1" checked>
+					<label for="option1" class="icon-left-w3pvt"><span class="fa fa-user-circle" aria-hidden="true"></span>Login</label>
+					<article href="/login">
+						<form method="post">
+                            @csrf
+							<h3 class="legend">Login Here</h3>
+							<div class="input">
+								<span class="fa fa-envelope-o" aria-hidden="true"></span>
+								<input type="email" placeholder="Email" name="useremail" />
+							</div>
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="password" placeholder="Password" name="password" />
+							</div>
+							<button type="submit" class="btn submit">Login</button>
+							<a href="#" class="bottom-text-w3ls">Forgot Password?</a>
+                            <span style="color: red">  {{session('msg')}}</span>
+						</form>
 
-     <fieldset>
-      <legend>Login</legend>
-      <table>
-          <tr>
-            <td>Useremail</td>
-            <td><input type="email" name="useremail"></td>
-          </tr>
-          <tr>
-            <td>Password</td>
-            <td><input type="password" name="password"></td>
-          </tr>
-          <tr>
+					</article>
 
-            <td><input type="submit" name="submit" value="Submit"></td>
-          </tr>
-      </table>
+				</div>
 
-     </fieldset>
+                <div id="section2" class="section-w3ls">
+					<input type="radio" name="sections" id="option2">
+					<label for="option2" class="icon-left-w3pvt"><span class="fa fa-pencil-square" aria-hidden="true"></span>
+                        <a href="/registration">Register</a>
+                        </label>
+
+				</div>
+
+			</div>
+			<!-- //vertical tabs -->
+			<div class="clear"></div>
+		</div>
+		<!-- copyright -->
+		<div class="copyright">
+			<h2>&copy; 2019 Triple Forms. All rights reserved | Design by
+				<a href="http://w3layouts.com" target="_blank">W3layouts</a>
+			</h2>
+		</div>
+		<!-- //copyright -->
+	</div>
 
 
-  </form>
-
-
-  {{session('msg')}} <!-- session global helper. jekno jayga theke access kora jabe  -->
 
 </body>
 </html>

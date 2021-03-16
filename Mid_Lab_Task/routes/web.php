@@ -25,4 +25,7 @@ Route::get('/home/admin','HomeController@admin');
 Route::get('/logout','LogoutController@index');
 Route::get('/registration','RegistrationController@index');
 Route::post('/registration','RegistrationController@store');
-
+Route::get('/system/sales','SalesController@index');
+Route::get('/sales/physical_store','SalesController@physicalstore');
+Route::get('/sales/social_media','SalesController@socialmedia');
+Route::get('/sales/ecommerce','SalesController@ecommerce');

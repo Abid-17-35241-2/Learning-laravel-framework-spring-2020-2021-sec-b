@@ -9,7 +9,8 @@
 <body>
 
     <h1>Welcome Home!! {{ session ('name')}}</h1>
-    <a href="/logout">Logout</a>
+    <a href="/logout">Logout</a> |
+    <a href="/system/sales">Sales</a>
 
 </body>
 </html>

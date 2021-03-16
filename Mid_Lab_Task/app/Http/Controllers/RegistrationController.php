@@ -10,7 +10,8 @@ class RegistrationController extends Controller
 {
     public function index(){
 
-      return view('Login.registration');
+    return view('Login.registration');
+      /* return view('Login.index'); */
     }
 
     public function store(CustomerRequest $req){
@@ -20,11 +21,9 @@ class RegistrationController extends Controller
 
     $customer->full_name  = $req->name;
 
-    $customer->username   = $req->username;
-    $customer->useremail  = $req->email;
-    $customer->password = $req->password;
-
-    $customer->address      = $req->address;
+    $customer->username     = $req->username;
+    $customer->useremail    = $req->email;
+    $customer->password     = $req->password;
     $customer->company_name = $req->company_name;
     $customer->phone        = $req->phone;
     $customer->city         = $req->city;

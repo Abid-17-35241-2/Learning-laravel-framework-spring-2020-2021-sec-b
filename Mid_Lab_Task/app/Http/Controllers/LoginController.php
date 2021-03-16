@@ -19,11 +19,11 @@ class LoginController extends Controller
                    ->get();
 
         $admin = DB::table('admins')
-                   -> where('password', $req->password)
-                   ->where('email', $req->useremail)
+                   -> where('ad_password', $req->password)
+                   ->where('ad_email', $req->useremail)
                    ->get();
 
-        $name = DB::table('admins')->where('email', $req->useremail)->value('name');
+        $name = DB::table('admins')->where('ad_email', $req->useremail)->value('ad_name');
         $username = DB::table('customers')->where('useremail', $req->useremail)->value('username');
 
        if ($req->useremail == "" || $req->password == "") {
@@ -38,7 +38,7 @@ class LoginController extends Controller
 
         }elseif (count($admin) > 0) {
 
-            $req->session()->put('name', $name);
+            $req->session()->put('ad_name', $name);
            return redirect('/home/admin');
 
           }else {

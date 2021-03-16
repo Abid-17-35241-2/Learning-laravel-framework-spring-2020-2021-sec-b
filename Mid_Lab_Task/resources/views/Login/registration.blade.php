@@ -1,101 +1,142 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Registration page</title>
-</head>
+    <head>
+        <title>Triple Forms Responsive Widget Template :: w3layouts</title>
+
+        <!-- Meta tag Keywords -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="Triple Forms Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+        <script>
+            addEventListener("load", function () {
+                setTimeout(hideURLbar, 0);
+            }, false);
+
+            function hideURLbar() {
+                window.scrollTo(0, 1);
+            }
+        </script>
+        <!-- Meta tag Keywords -->
+        <!-- css files -->
+        <link rel="stylesheet" href="loginD/css/style.css" type="text/css" media="all" />
+        <!-- Style-CSS -->
+        <link href="loginD/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Font-Awesome-Icons-CSS -->
+        <!-- //css files -->
+
+        <!-- web-fonts -->
+        <link href="//fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext"
+         rel="stylesheet">
+        <!-- //web-fonts -->
+    </head>
 <body>
-  <h1 style="text-align: center">Registration Page</h1>
+    <div class="main-bg">
+		<!-- title -->
+		<h1>Login Forms</h1>
+		<!-- //title -->
+		<div class="sub-main-w3">
+			<div class="image-style">
 
-  <form method="post">
+			</div>
+			<!-- vertical tabs -->
+			<div class="vertical-tab">
 
-    @csrf
+                <div id="section1" class="section-w3ls">
+					<input type="radio" name="sections" id="option1" checked>
+					<label for="option1" class="icon-left-w3pvt"><span class="fa fa-pencil-square" aria-hidden="true"></span>
+                        <a href="/registration">Register</a>
+                        </label>
+					<article>
+						<form method="post">
+                            @csrf
+							<h3 class="legend">Register Here</h3>
 
-     <fieldset>
+							<div class="input">
+                                <span class="fa fa-user-o" aria-hidden="true"></span>
+                                <input type="text" name="name" value="{{old('name')}}" placeholder="Full-Name"><br>
+							</div>
+                            <span style="color: red">{{ $errors->first('name') }}</span>
 
-      <legend>ADD</legend>
+							<div class="input">
+                                <span class="fa fa-user-o" aria-hidden="true"></span>
+                                <input type="text" name="username" value="{{old('username')}}" placeholder="UserName"><br>
 
-      <table>
-           <td></td>
-          <tr>
-            <td>Full Name</td>
-            <td><input type="text" name="name" value="{{old('name')}}"><br>
-                <span style="color: red">{{ $errors->first('name') }}</span><br>
-            </td>
+							</div>
+                            <span style="color: red">{{ $errors->first('username') }}</span><br>
 
+							<div class="input">
+                                <span class="fa fa-user-o" aria-hidden="true"></span>
+                                <input type="text" name="email" value="{{old('email')}}" placeholder="Email"><br>
+							</div>
+                            <span style="color: red">{{ $errors->first('email') }}</span>
 
-          </tr>
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="password" placeholder="Password" name="password"  />
+							</div>
+                            <span style="color: red">{{ $errors->first('password') }} </span>
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="password" placeholder="Confirm Password" name="cpassword"  />
+							</div>
+                            <span style="color: red">{{ $errors->first('cpassword') }}</span>
 
-          <tr>
-            <td>username</td>
-            <td><input type="text" name="username" value="{{old('username')}}">
-                <br>
-                <span style="color: red">{{ $errors->first('username') }}</span><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Email</td>
-            <td><input type="email" name="email" value="{{old('email')}}">
-                <br>
-                <span style="color: red">{{ $errors->first('email') }}</span><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Password</td>
-            <td><input type="password" name="password" value="{{old('password')}}">
-                <br>
-                <span style="color: red">{{ $errors->first('password') }}</span><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Confirm Password</td>
-            <td><input type="password" name="cpassword" value="{{old('cpassword')}}">
-                <br>
-                <span style="color: red">{{ $errors->first('cpassword') }}</span><br>
-            </td>
-          </tr>
-          <tr>
-            <td>Address</td>
-            <td><input type="text" name="address" value="{{old('address')}}"><br><br></td>
-          </tr>
-          <tr>
-            <td>Company</td>
-            <td><input type="text" name="company_name" value="{{old('company_name')}}"><br><br></td>
-          </tr>
-          <tr>
-            <td>Phone Number</td>
-            <td><input type="text" name="phone" value="{{old('phone')}}">
-                <br>
-                <span style="color: red">{{ $errors->first('phone') }}</span><br>
-            </td>
-          </tr>
-          <tr>
-            <td>City</td>
-            <td><input type="text" name="city" value="{{old('city')}}"><br><br></td>
-          </tr>
-          <tr>
-            <td>Country</td>
-            <td><input type="text" name="country" value="{{old('country')}}"><br><br></td>
-          </tr>
-          <tr>
-            <td>User Type</td>
-            <td><input type="text" name="usertype" value="Active" ></td>
-          </tr>
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="text" placeholder="Company Name" name="company_name" value="{{old('company_name')}}" />
+							</div>
 
-          <tr>
-            <td></td>
-            <td><input type="submit" name="submit" value="SignUp"></td>
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="text" placeholder="Phone" name="phone" value="{{old('phone')}}"/>
+							</div>
+                            <span style="color: red">{{ $errors->first('phone') }}</span>
+
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="text" placeholder="City" name="city" value="{{old('city')}}"/>
+							</div>
+
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="text" placeholder="Country" name="country" value="{{old('country')}}"  />
+							</div>
+
+							<div class="input">
+								<span class="fa fa-key" aria-hidden="true"></span>
+								<input type="text" placeholder="Usertype" name="usertype"  />
+							</div>
 
 
-          </tr>
-      </table>
-
-     <h2 style="color: red">{{session('msg')}}</h2>
-
-     </fieldset>
+							<button type="submit" class="btn submit">Register</button>
+						</form>
+					</article>
+				</div>
 
 
-  </form>
-  <a href="/login">Back</a>
+				<div id="section2" class="section-w3ls">
+					<input type="radio" name="sections" id="option2">
+					<label for="option2" class="icon-left-w3pvt"><span class="fa fa-user-circle" aria-hidden="true"></span>
+                        <a href="/login">Login</a>
+                    </label>
+
+				</div>
+
+
+			</div>
+			<!-- //vertical tabs -->
+			<div class="clear"></div>
+		</div>
+		<!-- copyright -->
+		<div class="copyright">
+			<h2>&copy; 2019 Triple Forms. All rights reserved | Design by
+				<a href="http://w3layouts.com" target="_blank">W3layouts</a>
+			</h2>
+		</div>
+		<!-- //copyright -->
+	</div>
+
+  {{session('msg')}} <!-- session global helper. jekno jayga theke access kora jabe  -->
 
 </body>
 </html>
